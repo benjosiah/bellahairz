@@ -11,9 +11,9 @@ import Welcome from '@/Components/Welcome.vue';
             </h2>
         </template>
 
-        <div class="py-12">
-                    <Welcome />
 
-        </div>
+            
+
+        
     </AppLayout>
 </template>

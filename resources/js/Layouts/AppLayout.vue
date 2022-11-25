@@ -8,6 +8,7 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import Welcome from '@/Components/Welcome.vue';
 
 defineProps({
     title: String,
@@ -303,9 +304,46 @@ const logout = () => {
             </header>
 
             <!-- Page Content -->
-            <main>
-                <slot />
+    <div class="min-h-screen bg-gray-100 flex">
+        <nav class="bg-white shadow w-64 flex flex-col justify-between">
+            <div class="">
+                <a href="/"  class="block m-4">
+                    <h1 class="text-xl font-semibold">BellaHairz Admin</h1>
+                </a>
+                <div class="px-6 py-4 flex flex-col space-y-4">
+                    <a href="/">
+                        <h1 class="text-lg ">Dashboard</h1>
+                    </a>
+                    <a :href="route('categories.index')">
+                        <h1 class="text-lg ">Category</h1>
+                    </a>
+                    <a :href="route('products.index')">
+                        <h1 class="text-lg ">Products</h1>
+                    </a>
+                </div>
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="px-6 py-4">
+                <div class="mb-10">
+                    <form method="POST" @submit.prevent="logout">
+                        <button>
+                            Logout
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex-grow">
+            <main class="">
+                <slot></slot>
             </main>
+        </div>
+        <!-- Modal Portal -->
+        <portal-target name="modal" multiple>
+        </portal-target>
+    </div>
         </div>
     </div>
 </template>

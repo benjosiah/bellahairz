@@ -33,3 +33,25 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::prefix('categories')->group(function () {
+        Route::get('/', 'App\Http\Controllers\CategoryController@index')->name('categories.index');
+        Route::get('/create', 'App\Http\Controllers\CategoryController@create')->name('categories.create');
+        Route::post('/', 'App\Http\Controllers\CategoryController@store')->name('categories.store');
+        Route::get('/{id}', 'App\Http\Controllers\CategoryController@show')->name('categories.show');
+        Route::get('/{id}/edit', 'App\Http\Controllers\CategoryController@edit')->name('categories.edit');
+        Route::put('/{id}', 'App\Http\Controllers\CategoryController@update')->name('categories.update');
+        Route::delete('/{id}', 'App\Http\Controllers\CategoryController@destroy')->name('categories.destroy');
+    });
+    Route::prefix('products')->group(function () {
+        Route::get('/', 'App\Http\Controllers\ProductController@index')->name('products.index');
+        Route::get('/create', 'App\Http\Controllers\ProductController@create')->name('products.create');
+        Route::post('/', 'App\Http\Controllers\ProductController@store')->name('products.store');
+        Route::get('/{id}', 'App\Http\Controllers\ProductController@show')->name('products.show');
+        Route::get('/{id}/edit', 'App\Http\Controllers\ProductController@edit')->name('products.edit');
+        Route::put('/{id}', 'App\Http\Controllers\ProductController@update')->name('products.update');
+        Route::delete('/{id}', 'App\Http\Controllers\ProductController@destroy')->name('products.destroy');
+    });
+    
+});
