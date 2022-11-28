@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ProductPageController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +18,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return view('welcome');
 });
 
 Route::middleware([
@@ -55,3 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     
 });
+
+Route::get('prooduct-page', [ProductPageController::class, 'products'])->name('product');
+Route::get('cart', [CartController::class, 'cart'])->name('cart');
+Route::get('checkout', [ProductPageController::class, 'checkout'])->name('checkout');

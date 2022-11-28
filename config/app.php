@@ -181,6 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
@@ -196,6 +197,9 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        Unicodeveloper\Paystack\PaystackServiceProvider::class,
+        
 
     ],
 
@@ -212,6 +216,9 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
+
     ])->toArray(),
 
 ];
