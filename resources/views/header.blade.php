@@ -21,7 +21,7 @@
                             <li>
                                 <a href="/" class="menu-active">home</a>
                             </li>
-                            <li><a href="about.html">about</a>
+                            <li><a href="about.php">about</a>
                             </li>
                             <li><a href="prooduct-page">Product List</a>
                                
@@ -29,7 +29,7 @@
                             <li><a href="blog">blog</a>
                                
                             </li>
-                            <li><a href="contact-us.html">contact</a></li>
+                            <li><a href="contact-us.php">contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -250,12 +250,12 @@
                     <a href="index.html" class="menu-active">home</a><span class="lnr lnr-chevron-down drop-link"></span>
                 </li>
                 <li>
-                    <a href="about.html">page</a><span class="lnr lnr-chevron-down drop-link"></span>
+                    <a href="about.php">page</a><span class="lnr lnr-chevron-down drop-link"></span>
                 </li>
                 <li><a href="product-list.html">shop</a><span class="lnr lnr-chevron-down drop-link"></span>
                    
                 </li>
-                <li><a href="contact-us.html">contact</a></li>
+                <li><a href="contact-us.php">contact</a></li>
             </ul>
         </div>
     </div>

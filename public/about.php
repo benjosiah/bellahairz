@@ -37,71 +37,31 @@
                 <div>
                     <div class="menu">
                         <ul>
-                            <li><a href="index.html">home</a>
-                                <ul>
-                                    <li><a href="index.html">Home Page_v1</a></li>
-                                    <li><a href="index2.html">Home Page_v2</a></li>
-                                    <li><a href="index3.html">Home Page_v3</a></li>
-                                </ul>
+                            <li>
+                                <a href="/" class="menu-active">home</a>
                             </li>
-                            <li><a href="about.html" class="menu-active">page</a>
-                                <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="what-we-offer.html">What We Offer</a></li>
-                                    <li><a href="our-team.html">Our Team</a></li>
-                                    <li><a href="comming-soon.html">Comming Soon</a></li>
-                                    <li><a href="error-page.html">Error Page</a></li>
-                                </ul>
+                            <li><a href="about.php">about</a>
                             </li>
-                            <li><a href="product-list.html">shop</a>
-                                <ul>
-                                    <li><a href="product-list.html">Product List</a></li>
-                                    <li><a href="product-single.html">Product Single</a></li>
-                                    <li><a href="shop-2-colum.html">Layouts</a><span class="lnr lnr-chevron-right"></span>
-                                        <ul>
-                                            <li><a href="shop-2-colum.html">2 Colums</a></li>
-                                            <li><a href="shop-3-colum.html">3 Colums</a></li>
-                                            <li><a href="shop-4-colum.html">4 Colums</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a href="cart.html">Shop Page</a><span class="lnr lnr-chevron-right"></span>
-                                        <ul>
-                                            <li><a href="my-account.html">My Account</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="wishlist.html">Wish List</a></li>
-                                            <li><a href="checkout.html">Check Out</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                            <li><a href="prooduct-page">Product List</a>
+                               
                             </li>
-                            <li><a href="blog-single.html">blog</a>
-                                <ul>
-                                    <li><a href="blog-masonry.html">Masonry</a></li>
-                                    <li><a href="blog-standard-right-siderbar.html">Standard</a><span class="lnr lnr-chevron-right"></span>
-                                        <ul>
-                                            <li><a href="blog-standard-right-siderbar.html">Right Sidebar</a></li>
-                                            <li><a href="blog-standard-left-siderbar.html">Left Sidebar</a></li>
-                                            <li><a href="blog-standard-no-sliderbar.html">No Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog-single.html">Single</a></li>
-                                </ul>
+                            <li><a href="blog">blog</a>
+                               
                             </li>
-                            <li><a href="contact-us.html">contact</a></li>
+                            <li><a href="contact-us.php">contact</a></li>
                         </ul>
                     </div>
                 </div>
                 <div>
                     <div class="header-right">
                         <ul class="list-inline">
-                            <li><a href="#" class="cart-index">
+                            <li><a href="/cart" class="cart-index">
                                 <img src="imager/home/bag-2.png" alt="" style="width: 16px;height: 22px;margin-top: -10px;">
                                 <div class="number-cart">
-                                    2
+                               
                                 </div>
                             </a>
-                                <div class="widget_shopping_cart">
+                                <!-- <div class="widget_shopping_cart">
                                     <div class="widget_shopping_cart_content">
                                         <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                             <li class="woocommerce-mini-cart-item mini_cart_item clearfix">
@@ -151,7 +111,7 @@
                                                 CHECKOUT</a>
                                         </p>
                                     </div>
-                                </div>
+                                </div> -->
                             </li>
                             <li><a href="javascript:void(0)" class="search-header1"><img src="imager/home/search-header.png" alt="" style="width: 20px;height: 20px;margin-top: -10px;"></a>
                             </li>
@@ -211,13 +171,13 @@
                 <div>
                     <div class="row header-right">
                         <ul class="list-inline">
-                            <li><a href="#" class="cart-index">
+                            <li><a href="/cart" class="cart-index">
                                 <img src="imager/home/bag-2.png" alt="" style="width: 16px;height: 22px;margin-top: -10px;">
                                 <div class="number-cart">
-                                    2
+                                    {{\Gloudemans\Shoppingcart\Facades\Cart::instance('shopping')->count()}}
                                 </div>
                             </a>
-                                <div class="widget_shopping_cart">
+                                <!-- <div class="widget_shopping_cart">
                                     <div class="widget_shopping_cart_content">
                                         <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                             <li class="woocommerce-mini-cart-item mini_cart_item clearfix">
@@ -267,7 +227,7 @@
                                                 CHECKOUT</a>
                                         </p>
                                     </div>
-                                </div>
+                                </div> -->
                             </li>
                             <li><a href="javascript:void(0)" class="search-header1"><img src="imager/home/search-header.png" alt="" style="width: 20px;height: 20px;margin-top: -10px;"></a>
                             </li>
@@ -305,77 +265,20 @@
         </div>
         <div class="menu-mobile">
             <ul>
-                <li><a href="index.html" class="menu-active">home</a><span class="lnr lnr-chevron-down drop-link"></span>
-                    <ul class="drop-menu">
-                        <li><a href="index.html">Home Page_v1</a></li>
-                        <li><a href="index2.html">Home Page_v2</a></li>
-                        <li><a href="index3.html">Home Page_v3</a></li>
-                    </ul>
+                <li>
+                    <a href="index.html" class="menu-active">home</a><span class="lnr lnr-chevron-down drop-link"></span>
                 </li>
-                <li><a href="about.html">page</a><span class="lnr lnr-chevron-down drop-link"></span>
-                    <ul class="drop-menu">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="what-we-offer.html">What We Offer</a></li>
-                        <li><a href="our-team.html">Our Team</a></li>
-                        <li><a href="comming-soon.html">Comming Soon</a></li>
-                        <li><a href="error-page.html">Error Page</a></li>
-                    </ul>
+                <li>
+                    <a href="about.php">page</a><span class="lnr lnr-chevron-down drop-link"></span>
                 </li>
                 <li><a href="product-list.html">shop</a><span class="lnr lnr-chevron-down drop-link"></span>
-                    <ul class="drop-menu">
-                        <li><a href="product-list.html">Product List</a></li>
-                        <li><a href="product-single.html">Product Single</a></li>
-                        <li><a href="shop-2-colum.html">Layouts</a><span class="lnr lnr-chevron-down drop-link"></span>
-                            <ul class="drop-menu">
-                                <li><a href="shop-2-colum.html">2 Colums</a></li>
-                                <li><a href="shop-3-colum.html">3 Colums</a></li>
-                                <li><a href="shop-4-colum.html">4 Colums</a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="cart.html">Shop Page</a><span class="lnr lnr-chevron-down drop-link"></span>
-                            <ul class="drop-menu">
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="wishlist.html">Wish List</a></li>
-                                <li><a href="checkout.html">Check Out</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                   
                 </li>
-                <li><a href="blog-single.html">blog</a><span class="lnr lnr-chevron-down drop-link"></span>
-                    <ul class="drop-menu">
-                        <li><a href="blog-masonry.html">Masonry</a></li>
-                        <li><a href="blog-standard-right-siderbar.html">Standard</a><span class="lnr lnr-chevron-down drop-link"></span>
-                            <ul class="drop-menu">
-                                <li><a href="blog-standard-right-siderbar.html">Right Sidebar</a></li>
-                                <li><a href="blog-standard-left-siderbar.html">Left Sidebar</a></li>
-                                <li><a href="blog-standard-no-sliderbar.html">No Sidebar</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog-single.html">Single</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact-us.html">contact</a></li>
+                <li><a href="contact-us.php">contact</a></li>
             </ul>
         </div>
     </div>
 </div>
-<!--end header mobile-->
-<!--end header-->
-
-<div class="content-about">
-    <!--title page-->
-    <div class="title-page" style="background-image: url('imager/title-page1.jpg');background-position: center center;background-size: cover;">
-        <div class="container">
-            <div class="row">
-                <div class=" col-md-6 inner-title-page">
-                    <h1>About Us</h1>
-                    <p><span>Home</span>/ About Us</p>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--end title page-->
     <!--content about-->
     <div class="about">
