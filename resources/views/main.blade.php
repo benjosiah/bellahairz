@@ -52,6 +52,9 @@
 @yield('content')
 @include('footer')
 @livewireScripts
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <x-livewire-alert::scripts />
 <script>
     // window.addEventListener('show-product', event => {
     //     // console.log(product)

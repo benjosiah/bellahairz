@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-use App\Models\products as Product;
+use App\Models\Product as Product;
 use App\Models\Category;
 
 
@@ -13,8 +13,10 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        $categories = Category::all();
         return Inertia::render('Products/Index', [
-            'products' => $products
+            'products' => $products,
+            'categories' => $categories
         ]);
 
 
@@ -81,12 +83,8 @@ class ProductController extends Controller
             'description' => 'required',
             'category_id' => 'required',
             'stock' => 'required',
-            'image' => 'required',
         ]);
 
-        $image = $request->file('image');
-        $image_name = time() . '.' . $image->extension();
-        $image->move(public_path('images'), $image_name);
 
         $product = Product::find($id);
         $product->name = $request->name;
@@ -94,7 +92,6 @@ class ProductController extends Controller
         $product->description = $request->description;
         $product->category_id = $request->category_id;
         $product->stock = $request->stock;
-        $product->image = $image_name;
         $product->save();
 
         return redirect()->route('products.index');

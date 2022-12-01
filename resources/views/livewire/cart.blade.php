@@ -95,7 +95,9 @@
                     <li class="list-inline-item"><p>Total</p></li>
                     <li class="list-inline-item"><p>{{$total}}</p></li>
                 </ul>
-                <button class="btn float-left">PROCEED TO CHECKOUT</button>
+                <a href="/checkout">
+                    <button class="btn float-left">PROCEED TO CHECKOUT</button>
+                </a>
             </div>
         </div>
     </div>

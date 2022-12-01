@@ -320,6 +320,12 @@ const logout = () => {
                     <a :href="route('products.index')">
                         <h1 class="text-lg ">Products</h1>
                     </a>
+                    <a :href="route('order.index')">
+                        <h1 class="text-lg ">Orders</h1>
+                    </a>
+                    <a :href="route('payment.index')">
+                        <h1 class="text-lg ">Payment</h1>
+                    </a>
                 </div>
             </div>
 

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ProductPageController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,9 +51,19 @@ Route::group(['middleware' => 'auth'], function () {
         Route::put('/{id}', 'App\Http\Controllers\ProductController@update')->name('products.update');
         Route::delete('/{id}', 'App\Http\Controllers\ProductController@destroy')->name('products.destroy');
     });
+    Route::prefix('orders')->group(function () {
+        Route::get('/', 'App\Http\Controllers\PaymentController@index')->name('order.index');
+        Route::get('/{id}', 'App\Http\Controllers\PaymentController@show')->name('order.show');
+    });
+    Route::prefix('payments')->group(function () {
+        Route::get('/', 'App\Http\Controllers\PaymentController@payment')->name('payment.index');
+    });
     
 });
 
 Route::get('prooduct-page', [ProductPageController::class, 'products'])->name('product');
 Route::get('cart', [CartController::class, 'cart'])->name('cart');
 Route::get('checkout', [ProductPageController::class, 'checkout'])->name('checkout');
+// Laravel 8 & 9
+Route::post('/pay', [PaymentController::class, 'redirectToGateway'])->name('pay');
+Route::get('payment/callback', [PaymentController::class, 'callback'])->name('callback');

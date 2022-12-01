@@ -4,12 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
-use App\Models\products as ProductList;
+use App\Models\Product as ProductList;
 // use Gloudemans\Shoppingcart\Cart;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Product extends Component
 {
+    use LivewireAlert;
     public $Sproduct;
     public $count=1;
     // public $categories;
@@ -40,7 +42,8 @@ class Product extends Component
         Cart::instance('shopping')->add($product['id'], $product['name'], 1, $product['price'], [
             'image'=> $product['image']
         ]);
-        $this->dispatchBrowserEvent('show-product');
+        $this->alert('success', 'Product added to cart');
+        // $this->dispatchBrowserEvent('show-product');
         // dd(Cart::content());
     }
 
