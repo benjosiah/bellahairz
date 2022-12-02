@@ -13,7 +13,7 @@ use Inertia\Inertia;
 class PaymentController extends Controller
 {
     public function redirectToGateway(Request $request){
-        // dd('iii');
+        dd('iii');
        $body = $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
