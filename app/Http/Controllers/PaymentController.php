@@ -13,7 +13,7 @@ use Inertia\Inertia;
 class PaymentController extends Controller
 {
     public function redirectToGateway(Request $request){
-        dd('iii');
+//         dd('iii');
        $body = $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
@@ -42,16 +42,16 @@ class PaymentController extends Controller
             'reference' => $reference
         ];
         // dd(floatval($amount));
-        try{
-            Payment::create([
-                'order_id' => $order->id,
-                'reference' => $reference
-            ]);
+//         try{
+//             Payment::create([
+//                 'order_id' => $order->id,
+//                 'reference' => $reference
+//             ]);
             return Paystack::getAuthorizationUrl($data)->redirectNow();
-        }catch(\Exception $e) {
-            dd('iiiii');
-            return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
-        }  
+//         }catch(\Exception $e) {
+//             dd('iiiii');
+//             return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
+//         }  
     }
 
     public function callback(Request $request){
@@ -71,9 +71,9 @@ class PaymentController extends Controller
 
 
         }else{
-            $payment->update([
-                'details'=> $paymentDetails['data'],
-            ]);
+//             $payment->update([
+//                 'details'=> $paymentDetails['data'],
+//             ]);
             $order->update([
                 'status' => 'failed'
             ]);
