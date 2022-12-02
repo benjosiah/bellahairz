@@ -42,16 +42,16 @@ class PaymentController extends Controller
             'reference' => $reference
         ];
         // dd(floatval($amount));
-//         try{
+        try{
 //             Payment::create([
 //                 'order_id' => $order->id,
 //                 'reference' => $reference
 //             ]);
             return Paystack::getAuthorizationUrl($data)->redirectNow();
-//         }catch(\Exception $e) {
-//             dd('iiiii');
-//             return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
-//         }  
+        }catch(\Exception $e) {
+            // dd('iiiii');
+            return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
+        }  
     }
 
     public function callback(Request $request){
