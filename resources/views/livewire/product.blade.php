@@ -76,6 +76,11 @@
 
                     </div>
                     @endforeach
+                    @empty($products)
+                    <div class="col-md-4 col-sm-6 col-12">
+                        No tem found                    
+                    </div>
+                    @endif
                     
                     <!-- <ul class="pagination justify-content-center">
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -151,6 +156,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                   
                                 </div>
                                 <!-- <span class="lnr lnr-cross close-quick-view" data-dismiss="modal"></span> -->
                             </div>
@@ -171,10 +177,12 @@
                         <span class="float-left">Price: $6 - $54</span>
                         <button class="btn float-right">FILTER</button>
                     </div> -->
+                    
                     <div class="category-blog">
                         <h2>Categories</h2>
+                        <a href="/prooduct-page"> All </a>
                         @foreach($categories as $category)
-                        <a href=""> {{$category->name}} (23)</a>
+                        <a href="/prooduct-page?category={{$category->id}}"> {{$category->name}} ({{$category->products->count()}})</a>
                         @endforeach
                     </div>
                     <!-- <div class="popular-item">

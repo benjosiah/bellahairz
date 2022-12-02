@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Product as ProductList;
+use Illuminate\Http\Request;
 // use Gloudemans\Shoppingcart\Cart;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -14,6 +15,7 @@ class Product extends Component
     use LivewireAlert;
     public $Sproduct;
     public $count=1;
+    public $category = "";
     // public $categories;
     
     
@@ -47,10 +49,20 @@ class Product extends Component
         // dd(Cart::content());
     }
 
-    public function render()
+
+    public function render(Request $request)
     {
-        $products = ProductList::all();
-        $categories = Category::all();
+        $category = $request->category??'';
+        if($request->has('category') && $category !== ''){
+            $cat = Category::with('products')->where('id', $category)->first();
+            // dd($cat);
+            $products = $cat->products;
+            // return $products;
+        }else{
+            $products = ProductList::all(); 
+        }
+        
+        $categories = Category::with('products')->get();
         return view('livewire.product',[
             'products' => $products,
             'categories' => $categories
