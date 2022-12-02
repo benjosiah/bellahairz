@@ -45,7 +45,7 @@ class Product extends Component
             'image'=> $product['image']
         ]);
         $this->alert('success', 'Product added to cart');
-        // $this->dispatchBrowserEvent('show-product');
+        $this->dispatchBrowserEvent('refresh');
         // dd(Cart::content());
     }
 

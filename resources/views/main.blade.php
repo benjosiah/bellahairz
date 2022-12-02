@@ -56,10 +56,10 @@
   
   <x-livewire-alert::scripts />
 <script>
-    // window.addEventListener('show-product', event => {
-    //     // console.log(product)
-    //     $('#exampleModalCenter').modal('show')
-    // })
+    window.addEventListener('refresh', event => {
+        // console.log(product)
+        location.reload();
+    })
 </script>
 <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="asset/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
