@@ -43,10 +43,10 @@ class PaymentController extends Controller
         ];
         // dd(floatval($amount));
         try{
-            Payment::create([
-                'order_id' => $order->id,
-                'reference' => $reference
-            ]);
+//             Payment::create([
+//                 'order_id' => $order->id,
+//                 'reference' => $reference
+//             ]);
             return Paystack::getAuthorizationUrl($data)->redirectNow();
         }catch(\Exception $e) {
             dd('iiiii');
@@ -71,9 +71,9 @@ class PaymentController extends Controller
 
 
         }else{
-            $payment->update([
-                'details'=> $paymentDetails['data'],
-            ]);
+//             $payment->update([
+//                 'details'=> $paymentDetails['data'],
+//             ]);
             $order->update([
                 'status' => 'failed'
             ]);
