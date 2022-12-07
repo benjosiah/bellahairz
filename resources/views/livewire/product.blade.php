@@ -81,6 +81,7 @@
                         No tem found                    
                     </div>
                     @endif
+
                     
                     <!-- <ul class="pagination justify-content-center">
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -88,81 +89,10 @@
                         <li class="page-item"><a class="page-link" href="#"> > </a></li>
                     </ul> -->
                 </div>
-                <div class="modal fade" id="exampleModalCenter"  tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content container">
-                            <div class="product-single-quick-view">
-                                <div class="row product_detail">
-                                    <div class="col-md-6 col-sm-12 col-12">
-                                        <div class="flex-quick-view">
-                                            <div id="flex-slider" class="flexslider">
-                                                <ul class="slides">
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail.jpg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail.jpg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail.jpg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail.jpg" alt="">
-                                                    </li>
-                                                    <!-- items mirrored twice, total of 12 -->
-                                                </ul>
-                                            </div>
-                                            <div id="flex-carousel" class="flexslider">
-                                                <ul class="slides">
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail.jpg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail2.jpg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail3.jpg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="imager/product-detail/product_detail4.jpg" alt="">
-                                                    </li>
-                                                    <!-- items mirrored twice, total of 12 -->
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12 col-12 content-product">
-                                        <h2>{{$Sproduct->name?? ''}} | N {{$Sproduct->price??''}}</h2>
-                                        <!-- <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> &nbsp; (2 customer
-                                            review)</p> -->
-                                        <p>{{$Sproduct->description??''}}</p>
-                                        <div class="infor-product">
-                                            <p><span>Sku: </span>{{$Sproduct->stock??''}}</p>
-                                            <p><span>Category: </span>{{$Sproduct->category->name??''}}</p>
-                                            <!-- <p><span>Tag: </span>Trendy</p> -->
-                                            <p><span>Share: </span>
-                                                <a href=""><i class="fab fa-facebook"></i></a>
-                                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                                <a href=""><i class="fab fa-instagram"></i></a></p>
-                                        </div>
-                                        <div>
-                                            <div class="btn-group">
-                                                <button type="button" class="prev btn ">-</button>
-                                                <input type="number" value="1" class="show-number btn ">
-                                                <button type="button" class="next btn ">+</button>
-                                            </div>
-                                            <div class="btn-group">
-                                                <button wire:click.prevent="addTocart()" class="btn add-to-cart">ADD TO CART<p><i class="fas fa-cart-plus"></i></p> </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-                                <!-- <span class="lnr lnr-cross close-quick-view" data-dismiss="modal"></span> -->
-                            </div>
-                        </div>
-                    </div>
+                <div class="d-flex justify-content-center">
+                    {!! $products->links() !!}
                 </div>
+                
             </div>
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
                 <div class="content-blog-left">

@@ -54,12 +54,11 @@ class Product extends Component
     {
         $category = $request->category??'';
         if($request->has('category') && $category !== ''){
-            $cat = Category::with('products')->where('id', $category)->first();
-            // dd($cat);
-            $products = $cat->products;
+            $products = ProductList::where('category_id',$category )->paginate(20);
             // return $products;
         }else{
-            $products = ProductList::all(); 
+            $products = ProductList::paginate(20);
+            // dd($products);
         }
         
         $categories = Category::with('products')->get();
