@@ -26,4 +26,22 @@ class ProductPageController extends Controller
             'total'=> CartList::instance('shopping')->subtotal()
         ]);
     }
+
+    public function home(){
+        $products = Product::with('category')->get();
+        return view('welcome', [
+            'products'=> $products,
+        ]);
+    }
+
+    public function addTocart(Request $request){
+        $product = $request->product;
+        CartList::instance('shopping')->add($product['id'], $product['name'], 1, $product['price'], [
+            'image'=> $product['image']
+        ]);
+        return redirect()->back()->with([
+            'message' => "Item added to cart"
+        ]);
+        // dd(CartList::content());
+    }
 }

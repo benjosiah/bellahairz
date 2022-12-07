@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Product as Product;
 use App\Models\Category;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 
 class ProductController extends Controller
@@ -42,8 +43,8 @@ class ProductController extends Controller
         ]);
             
         $image = $request->file('image');
-        $image_name = time() . '.' . $image->extension();
-        $image->move(public_path('images'), $image_name);
+        $image_name = $this->uploadfile($image);
+      
 
         $product = new Product();
         $product->name = $request->name;
@@ -102,5 +103,12 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->delete();
         return redirect()->route('products.index');
+    }
+
+    public function uploadfile($file){
+        cloudinary()->admin();
+        $path = $file->storeOnCloudinary('resources');
+        $url = $path->getPath();
+        return $url;
     }
 }

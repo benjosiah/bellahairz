@@ -199,6 +199,7 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
+        CloudinaryLabs\CloudinaryLaravel\CloudinaryServiceProvider::class,
         
 
     ],
@@ -218,6 +219,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
+        'Cloudinary' => CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary::class,
 
     ])->toArray(),
 

@@ -4437,7 +4437,8 @@ i {
     .contact-us .content-contact-us form {
       margin-top: 50px; } }
 .prodcut-list {
-  margin: 120px 0 50px 0;
+  /* margin: 120px 0 50px 0; */
+  
   padding-bottom: 60px;
   border-bottom: 1px solid #e6e6e6; }
   .prodcut-list .modal-dialog {

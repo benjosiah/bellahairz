@@ -49,22 +49,41 @@
 </head>
 <body>
 @include('header')
+@if(session('message'))
+    <div class="alert alert-success" role="alert">
+        {{ session('message') }}
+    </div>
+@endif
 @yield('content')
 @include('footer')
 @livewireScripts
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.js"></script>
   <x-livewire-alert::scripts />
+
 <script>
     window.addEventListener('refresh', event => {
         // console.log(product)
         location.reload();
     })
+
+    function addToCart(product) {
+        axios.post('/add-to-cart', {
+            '_token': "{{csrf_token()}}",
+            'product': product
+        }).then(()=>{
+            location.reload();
+        })
+    }
 </script>
 <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="asset/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="asset/js/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="asset/js/owl.carousel.js"></script>
 <script type="text/javascript" src="asset/js/custom.js"></script>
+
+
+
+
 </body>
 </html>

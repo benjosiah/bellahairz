@@ -18,9 +18,7 @@ use App\Http\Controllers\PaymentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductPageController::class, 'home'])->name('home');
 
 Route::middleware([
     'auth:sanctum',
@@ -67,3 +65,5 @@ Route::get('checkout', [ProductPageController::class, 'checkout'])->name('checko
 // Laravel 8 & 9
 Route::post('/pay', [PaymentController::class, 'redirectToGateway'])->name('pay');
 Route::get('payment/callback', [PaymentController::class, 'callback'])->name('callback');
+
+Route::post('/add-to-cart', [ProductPageController::class, 'addTocart'])->name('addTocart');

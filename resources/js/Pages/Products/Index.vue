@@ -8,6 +8,18 @@
             :errors="errors"          
         />
 
+        <delete-up
+            :open="openDelete"
+            :message="deleteMessage"
+            @close="closeDelete"
+            @delete="deleteResource"
+        />
+        <message
+            :open="message.open"
+            :message="message.text"
+            :type="message.type"
+        />>
+
 
         <div class="flex items-center">
             <h2 class="text-gray-800 text-lg lg:text-2xl font-bold mr-auto">Products</h2>
@@ -85,11 +97,13 @@
 <script>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import AddProduct from '../components/addProduct.vue';
+import deleteUp from '../components/deleteComfirmation.vue';
+import Message from '../components/message.vue';
 export default {
     name: 'Products',
     metaInfo: {title: 'Products'},
     layout: AppLayout,
-    components: {AddProduct},
+    components: {AddProduct, deleteUp, Message },
     props: {
         products: {
             type: Array
@@ -104,7 +118,8 @@ export default {
             addModal: false,
             edit:false,
             openDelete: false,
-            // categoryToDelete: null,
+            productToDelete: null,
+            deleteMessage:"",
             message: {
                 open: false,
                 type: '',
@@ -129,7 +144,40 @@ export default {
             this.edit = false
             this.product = null
             this.closeAddModal()
-        }
+        },
+        deleteResource(){
+            this.$inertia.post(`/products/${this.productToDelete.id}`, {
+                _method: 'delete'
+            }, {
+                onSuccess: () => {
+                    this.openDelete = false
+                    this.toast("Product deleted succefully")
+                },
+
+                onError: (error) => {
+                    this.openDelete = false
+                    this.toast(error.error, 'error')
+                }
+            })
+        },
+        closeDelete(){
+            this.openDelete= false
+            this.productToDelete= null
+        },
+        deletemodal(product){
+            console.log('ll')
+            this.deleteMessage = `are you sure you want to delete this product (${product.name})`
+            this.openDelete = true
+            this.productToDelete = product
+        },
+        toast(text, type='success'){
+            this.message.text = text
+            this.message.open = true
+            this.message.type = type
+            setInterval(()=>{
+                this.message.open = false
+            }, 3000)
+        },
     },
 }
 </script>
