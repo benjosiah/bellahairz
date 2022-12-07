@@ -143,7 +143,9 @@ Home
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row product">
-                            @foreach($products as $product)
+                            @foreach($products as $key => $product)
+
+                                @if($key< 8 )
                                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-12">
                                     <div class="card">
                                         <div class="card-img-top">
@@ -171,17 +173,20 @@ Home
                                         </div>
                                     </div>
                                 </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="row product">
-                            @foreach($products as $product)
+                        @foreach($products as $key => $product)
+
+                        @if($key > 4 && $key < 12 )
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-12">
                                 <div class="card">
                                     <div class="card-img-top">
                                         <a href="product-single.html" class="wp-post-image">
-                                            <img class="image-cover" src="images/{{$product->image}}" alt="product">
+                                            <img class="image-cover" src="{{$product->image}}" alt="product">
                                         </a>
                                         
                                     </div>
@@ -204,6 +209,7 @@ Home
                                     </div>
                                 </div>
                             </div>
+                            @endif
                             @endforeach
                         </div>
                     </div>
