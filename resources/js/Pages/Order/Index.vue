@@ -114,9 +114,7 @@ export default {
         },
     },
     created(){
-                                  console.log(this.orders[0].order_item.reduce((a,b)=>{
-                                    return a + (b.price * b.qty)
-                                  }, 0))
+                            
     }
 }
 </script>
