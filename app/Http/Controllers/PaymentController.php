@@ -75,7 +75,9 @@ class PaymentController extends Controller
                 'status' => 'completed'
             ]);
             CartList::instance('shopping')->destroy();
-            return Redirect::back()->withMessage(['msg'=>'Payment Verify successful', 'type'=>'success']);
+            return Redirect::route('home')->with([
+                'message' => "Checkout completed"
+            ]);
 
 
         }else{

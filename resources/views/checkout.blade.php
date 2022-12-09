@@ -1,6 +1,6 @@
 @extends('main')
 @section('title')
-Home
+checkout
 @endsection
 @section('content')
 <div class="container ">
@@ -88,7 +88,7 @@ Home
                 <div class="card">
                     <div class="row no-gutters">
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-5">
-                            <img src="images/{{$item->options->image}}" class="card-img" alt="...">
+                            <img src="{{$item->options->image}}" class="card-img" alt="...">
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-7">
                             <div class="card-body">
