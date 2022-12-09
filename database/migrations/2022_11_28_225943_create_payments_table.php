@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('order_id');
             $table->string('reference');
-            $table->json('details')->nullable();
+            // $table->json('details')->nullable();
             $table->boolean('successful')->default(0);
             $table->timestamps();
         });
