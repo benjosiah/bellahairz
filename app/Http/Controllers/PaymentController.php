@@ -60,7 +60,7 @@ class PaymentController extends Controller
         $paymentDetails = Paystack::getPaymentData();
         $payment = Payment::where('reference', $request->reference)->first();
         $order = Order::where('id', $payment->order_id)->first();
-        $items = OrderItem::where('order_id',  $id)->get();
+        $items = OrderItem::where('order_id',  $order_id)->get();
         if($paymentDetails['status']== true && $paymentDetails['data']['status']=='success'){
             foreach ($items as $key => $item) {
                 $product = Product::where('id', $item->id)->first();
