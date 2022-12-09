@@ -45,10 +45,10 @@ class PaymentController extends Controller
         ];
         // dd(floatval($amount));
         try{
-//             Payment::create([
-//                 'order_id' => $order->id,
-//                 'reference' => $reference
-//             ]);
+            Payment::create([
+                'order_id' => $order->id,
+                'reference' => $reference
+            ]);
             return Paystack::getAuthorizationUrl($data)->redirectNow();
         }catch(\Exception $e) {
             // dd('iiiii');
@@ -58,7 +58,7 @@ class PaymentController extends Controller
 
     public function callback(Request $request){
         $paymentDetails = Paystack::getPaymentData();
-        // $payment = Payment::where('reference', $request->reference)->first();
+        $payment = Payment::where('reference', $request->reference)->first();
         $order = Order::where('id', $payment->order_id)->first();
         $items = OrderItem::where('order_id',  $id)->get();
         if($paymentDetails['status']== true && $paymentDetails['data']['status']=='success'){
@@ -67,10 +67,10 @@ class PaymentController extends Controller
                 $product->stock = $product->stock - $item->qty;
                 $product->update();
             }
-            // $payment->update([
-            //     'details'=> $paymentDetails['data'],
-            //     'successful' => $paymentDetails['status']
-            // ]);
+            $payment->update([
+                // 'details'=> $paymentDetails['data'],
+                'successful' => $paymentDetails['status']
+            ]);
             $order->update([
                 'status' => 'completed'
             ]);
