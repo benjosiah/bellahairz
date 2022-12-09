@@ -19,17 +19,17 @@
                     <div class="menu">
                         <ul>
                             <li>
-                                <a href="/" class="menu-active">home</a>
+                                <a href="/" >home</a>
                             </li>
-                            <li><a href="about.php">about</a>
+                            <li><a href="/about" >about</a>
                             </li>
                             <li><a href="prooduct-page">Product List</a>
                                
                             </li>
-                            <li><a href="blog">blog</a>
+                            <!-- <li><a href="blog">blog</a>
                                
-                            </li>
-                            <li><a href="contact-us.php">contact</a></li>
+                            </li> -->
+                            <li><a href="/contact">contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -247,15 +247,15 @@
         <div class="menu-mobile">
             <ul>
                 <li>
-                    <a href="index.html" class="menu-active">home</a><span class="lnr lnr-chevron-down drop-link"></span>
+                    <a href="/" >home</a><span class="lnr lnr-chevron-down drop-link"></span>
                 </li>
                 <li>
-                    <a href="about.php">page</a><span class="lnr lnr-chevron-down drop-link"></span>
+                    <a href="/about">About</a><span class="lnr lnr-chevron-down drop-link"></span>
                 </li>
-                <li><a href="product-list.html">shop</a><span class="lnr lnr-chevron-down drop-link"></span>
+                <li><a href="/prooduct-page">Product List</a><span class="lnr lnr-chevron-down drop-link"></span>
                    
                 </li>
-                <li><a href="contact-us.php">contact</a></li>
+                <li><a href="/contact">contact</a></li>
             </ul>
         </div>
     </div>

@@ -15,6 +15,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
         $categories = Category::all();
+        // return $products;
         return Inertia::render('Products/Index', [
             'products' => $products,
             'categories' => $categories
@@ -61,8 +62,10 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return Inertia::render('Products/Show', [
-            'product' => $product
+        $categories = Category::all();
+        return Inertia::render('Products/Details', [
+            'product' => $product,
+            'categories' => $categories
         ]);
     }
 
@@ -95,7 +98,9 @@ class ProductController extends Controller
         $product->stock = $request->stock;
         $product->save();
 
-        return redirect()->route('products.index');
+        return redirect()->back()->with([
+            'message' => "Product updated successfully"
+        ]);
     }
 
     public function destroy($id)
@@ -110,5 +115,23 @@ class ProductController extends Controller
         $path = $file->storeOnCloudinary('resources');
         $url = $path->getPath();
         return $url;
+    }
+
+    public function updateImage(Request $request, $id)
+    {
+        // dd('ii');
+        $request->validate([
+            'image' => 'required',
+        ]);
+
+        $image = $request->file('image');
+        $image_name = $this->uploadfile($image);
+        // dd($image_name);
+
+        $product = Product::find($id);
+        $product->image = $image_name;
+        $product->save();
+
+        return redirect()->back();
     }
 }

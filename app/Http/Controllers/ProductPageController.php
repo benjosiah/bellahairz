@@ -28,9 +28,14 @@ class ProductPageController extends Controller
     }
 
     public function home(){
-        $products = Product::with('category')->get();
+        $first = Category::with('products')->first();
+        $second = Category::with('products')->skip(1)->take(1)->first();
+        $last = Category::with('products')->skip(2)->take(1)->first();
+        // dd($second, $last);
         return view('welcome', [
-            'products'=> $products,
+            'first'=> $first,
+            'second'=> $second,
+            'last'=> $last,
         ]);
     }
 

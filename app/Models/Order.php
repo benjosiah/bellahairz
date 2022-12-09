@@ -32,6 +32,7 @@ class Order extends Model
         return $this->order_item()->create([
             'order_id' => $this->id,
             'product_id' => $data->id,
+            'price' => $data->price,
             'qty'=> $data->qty
         ]);
     }

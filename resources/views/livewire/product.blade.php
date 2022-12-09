@@ -38,7 +38,7 @@
                     <div class="col-md-4 col-sm-6 col-12">
                         <div class="card">
                             <div class="card-img-top">
-                                <a href="product-single.html" class="wp-post-image">
+                                <a href="javascript:void(0)" class="wp-post-image">
                                     <img class="image-cover" src="{{$product->image}}" alt="product">
                                 </a>
                                 
@@ -61,8 +61,8 @@
                                 <div class="btn-group">
                                     <button wire:click.prevent="addTocart({{$product}})" class="btn add-to-cart">ADD TO CART <i class="fas fa-cart-plus"></i> </button>
                                 </div>
-                                <p class="card-title"><a href="product-list.html">{{$product->category->name}} </a></p>
-                                <p class="woocommerce-loop-product__title"><a href="product-single.html">
+                                <p class="card-title"><a href="/prooduct-page">{{$product->category->name}} </a></p>
+                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
                                 {{$product->name}}</a></p>
                                 <span class="price">
 												<ins>
@@ -120,11 +120,11 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-6 col-6">
-                                   <a href="product-single.html"><img src="imager/product-popular/popular-item1.jpg" class="card-img" alt="..."></a>
+                                   <a href="javascript:void(0)"><img src="imager/product-popular/popular-item1.jpg" class="card-img" alt="..."></a>
                                 </div>
                                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-6 col-6">
                                     <div class="card-body">
-                                        <h5 class="card-title woocommerce-loop-product__title"><a href="product-single.html">Skin reaction</a></h5>
+                                        <h5 class="card-title woocommerce-loop-product__title"><a href="javascript:void(0)">Skin reaction</a></h5>
                                         <p class="card-text price">
                                             <ins>
 													<span class="woocommerce-Price-amount amount">
@@ -139,11 +139,11 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-6 col-6">
-                                   <a href="product-single.html"><img src="imager/product-popular/popular-item2.jpg" class="card-img" alt="..."></a>
+                                   <a href="javascript:void(0)"><img src="imager/product-popular/popular-item2.jpg" class="card-img" alt="..."></a>
                                 </div>
                                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-6 col-6">
                                     <div class="card-body">
-                                        <h5 class="card-title woocommerce-loop-product__title"><a href="product-single.html">Face cream</a> </h5>
+                                        <h5 class="card-title woocommerce-loop-product__title"><a href="javascript:void(0)">Face cream</a> </h5>
                                         <p class="card-text price">
                                             <ins>
 													<span class="woocommerce-Price-amount amount">
@@ -158,11 +158,11 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-6 col-6">
-                                  <a href="product-single.html"><img src="imager/product-popular/popular-item3.jpg" class="card-img" alt="..."></a>
+                                  <a href="javascript:void(0)"><img src="imager/product-popular/popular-item3.jpg" class="card-img" alt="..."></a>
                                 </div>
                                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-6 col-6">
                                     <div class="card-body">
-                                        <h5 class="card-title woocommerce-loop-product__title"><a href="product-single.html">Hydrating primer</a> </h5>
+                                        <h5 class="card-title woocommerce-loop-product__title"><a href="javascript:void(0)">Hydrating primer</a> </h5>
                                         <p class="card-text price">
                                             <ins>
 													<span class="woocommerce-Price-amount amount">

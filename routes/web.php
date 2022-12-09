@@ -20,6 +20,13 @@ use App\Http\Controllers\PaymentController;
 
 Route::get('/', [ProductPageController::class, 'home'])->name('home');
 
+Route::get('/about', function(){
+    return view('about');
+});
+Route::get('/contact', function(){
+    return view('contact');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -48,10 +55,12 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/{id}/edit', 'App\Http\Controllers\ProductController@edit')->name('products.edit');
         Route::put('/{id}', 'App\Http\Controllers\ProductController@update')->name('products.update');
         Route::delete('/{id}', 'App\Http\Controllers\ProductController@destroy')->name('products.destroy');
+        Route::post('/imgae/{id}/update', 'App\Http\Controllers\ProductController@updateImage')->name('image.update');
     });
     Route::prefix('orders')->group(function () {
         Route::get('/', 'App\Http\Controllers\PaymentController@index')->name('order.index');
         Route::get('/{id}', 'App\Http\Controllers\PaymentController@show')->name('order.show');
+        Route::post('/mark/{id}/completed', 'App\Http\Controllers\PaymentController@mark_coomplete')->name('mark.completed');
     });
     Route::prefix('payments')->group(function () {
         Route::get('/', 'App\Http\Controllers\PaymentController@payment')->name('payment.index');

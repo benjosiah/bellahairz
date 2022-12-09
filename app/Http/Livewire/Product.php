@@ -54,10 +54,10 @@ class Product extends Component
     {
         $category = $request->category??'';
         if($request->has('category') && $category !== ''){
-            $products = ProductList::where('category_id',$category )->paginate(20);
+            $products = ProductList::where('category_id',$category )->paginate(12);
             // return $products;
         }else{
-            $products = ProductList::paginate(20);
+            $products = ProductList::paginate(12);
             // dd($products);
         }
         

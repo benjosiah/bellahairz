@@ -269,7 +269,7 @@
                 <li>
                     <a href="about.php">page</a><span class="lnr lnr-chevron-down drop-link"></span>
                 </li>
-                <li><a href="product-list.html">shop</a><span class="lnr lnr-chevron-down drop-link"></span>
+                <li><a href="/prooduct-page">shop</a><span class="lnr lnr-chevron-down drop-link"></span>
                    
                 </li>
                 <li><a href="contact-us.php">contact</a></li>

@@ -25,7 +25,7 @@
             <h2 class="text-gray-800 text-lg lg:text-2xl font-bold mr-auto">Products</h2>
             <div class="hidden lg:flex flex-wrap-reverse">
                 <button  @click="showAddModal">
-                    <button  @click="showAddModal" class="btn-primary mr-2">Add new product
+                    <button  @click="showAddModal" class="btn-primary px-3 py-1 mr-2">Add new product
                     </button>
                 </button>
             </div>
@@ -55,18 +55,18 @@
                             </inertia-link>
                         </td>
                         <td class="border-t">
-                            <div class="break-words max-w-sm h-16 overflow-y-auto">
+                            <div class="break-words max-w-sm h-16">
                                 <inertia-link class="px-6 py-4 flex items-center" tabindex="-1"
                                               :href="route('products.show', product.id)">
-                                    {{ product.description }}
+                                    {{ product.description.substring(0,40)  }}...
                                 </inertia-link>
                             </div>
                         </td>
 
-                        <td class="border-t ">
+                        <td class="border-t w-px">
                             <inertia-link class="px-6 py-4 flex items-center" tabindex="-1"
                                           :href="route('products.show', product.id)">
-                                {{ product.price }}
+                                {{ product.price}}
                             </inertia-link>
                         </td>
                         <td class="border-t w-px">
@@ -88,6 +88,7 @@
                     <tr v-if="products.length === 0">
                         <td class="border-t px-6 py-4" colspan="4">No products found.</td>
                     </tr>
+                  
                 </table>
             </div>
         </div>

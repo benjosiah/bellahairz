@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Redirect;
 use Gloudemans\Shoppingcart\Facades\Cart as CartList;
 use App\Models\Order;
 use App\Models\Payment;
+use App\Models\Product;
+use App\Models\OrderItem;
 use Inertia\Inertia;
 
 class PaymentController extends Controller
@@ -56,13 +58,19 @@ class PaymentController extends Controller
 
     public function callback(Request $request){
         $paymentDetails = Paystack::getPaymentData();
-        $payment = Payment::where('reference', $request->reference)->first();
+        // $payment = Payment::where('reference', $request->reference)->first();
         $order = Order::where('id', $payment->order_id)->first();
+        $items = OrderItem::where('order_id',  $id)->get();
         if($paymentDetails['status']== true && $paymentDetails['data']['status']=='success'){
-            $payment->update([
-                'details'=> $paymentDetails['data'],
-                'successful' => $paymentDetails['status']
-            ]);
+            foreach ($items as $key => $item) {
+                $product = Product::where('id', $item->id)->first();
+                $product->stock = $product->stock - $item->qty;
+                $product->update();
+            }
+            // $payment->update([
+            //     'details'=> $paymentDetails['data'],
+            //     'successful' => $paymentDetails['status']
+            // ]);
             $order->update([
                 'status' => 'completed'
             ]);
@@ -71,9 +79,6 @@ class PaymentController extends Controller
 
 
         }else{
-//             $payment->update([
-//                 'details'=> $paymentDetails['data'],
-//             ]);
             $order->update([
                 'status' => 'failed'
             ]);
@@ -82,10 +87,27 @@ class PaymentController extends Controller
         }
     }
 
-    public function index(){
-        $order = Order::with('order_item')->get();
+    public function index(Request $request){
+        $order = Order::with('order_item.product')
+        ->when($request->has('filter'), function($query) use ($request){
+            $query->where('status', $request->filter);
+        })
+        ->get();
         return Inertia::render('Order/Index', [
             'orders' => $order,
+        ]);  
+    }
+    public function show($id){
+        $order = Order::with('order_item.product')->where('id', $id)->first();
+        // dd($order->order_item);
+        $order->total = $order->order_item->sum( function($item){
+            return $item->price * $item->qty;
+        });
+
+        // dd($order->total);
+        return Inertia::render('Order/Details', [
+            'order' => $order,
+            // 'filter' => $request->filter
         ]);  
     }
     public function payment(){
@@ -93,6 +115,14 @@ class PaymentController extends Controller
         return Inertia::render('Payment', [
             'payments' => $payments,
         ]);  
+    }
+
+    public function mark_coomplete($id){
+        $order = Order::where('id', $id)->first();
+        $order->update([
+            'status' => 'completed'
+        ]);
+        return redirect()->back();
     }
 
 }
