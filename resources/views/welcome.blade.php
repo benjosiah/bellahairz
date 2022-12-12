@@ -31,7 +31,7 @@ Home
                             <div class="row">
                                 <div class="col-lg-6 col-md-8 content-slide">
                                     <span>100% Human Hair</span>
-                                    <p>Super Double Drawn  </p>
+                                    <p>Redefine Your Class  </p>
                                     <h2>Affordable Luxury</h2>
                                     <a href="/prooduct-page">shop now</a>
                                 </div>
@@ -565,14 +565,14 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair1.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">The standard chunk</a>
+                                            <h5 class="card-title"><a href="blog-single.html">Caring for Hair Extensions</a>
                                             </h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                            <p class="card-text">Having spent a sizeable cut on your classy Bella hair
+                                                peruvian extensions, here are five tips on how to keep them ever new...</p>
                                         </div>
                                         <div class="card-body">
-                                            <span>20Th October 2019</span>
-                                            <a href="javascrip:void(0)" class="card-link share">Share
+                                            <span>20th October 2022</span>
+                                            <a href="javascrip:void(0)" class="card-link share">Read
                                             </a>
                                             <div class="icon-share">
                                                 <a href=""><i class="fab fa-twitter"></i></a>
@@ -586,14 +586,14 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair2.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">Excepteur sint occae</a>
+                                            <h5 class="card-title"><a href="blog-single.html">Essential Hair Equipment For You </a>
                                             </h5>
-                                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit
-                                                voluptatem accusantium doloremque laudantium.</p>
+                                            <p class="card-text">There is almost no way you can keep your hair alive
+                                                without owning some of these essential hair tools</p>
                                         </div>
                                         <div class="card-body">
-                                            <span>20Th October 2019</span>
-                                            <a href="javascrip:void(0)" class="card-link share">Share
+                                            <span>28th November 2019</span>
+                                            <a href="javascrip:void(0)" class="card-link share">Read
                                             </a>
                                             <div class="icon-share">
                                                 <a href=""><i class="fab fa-twitter"></i></a>
@@ -607,13 +607,13 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair3.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">Nemo enim ipsam</a></h5>
-                                            <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                                sit amet, consectetur, adipisci velit, sed quia non numquam.</p>
+                                            <h5 class="card-title"><a href="blog-single.html">Why Your Hair is Your Crown </a></h5>
+                                            <p class="card-text">Doing the most to get by, you put so much effort into 
+                                                your life daily, for that you've earned a crown, yous hair should tell.</p>
                                         </div>
                                         <div class="card-body share">
-                                            <span>20Th October 2019</span>
-                                            <a href="javascrip:void(0)" class="card-link share">Share
+                                            <span>04th November 2019</span>
+                                            <a href="javascrip:void(0)" class="card-link share">Read
                                             </a>
                                             <div class="icon-share">
                                                 <a href=""><i class="fab fa-twitter"></i></a>
@@ -631,14 +631,13 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair1.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">There are many
-                                                variations</a></h5>
-                                            <p class="card-text">If you are going to use a passage of Lorem Ipsum, you
-                                                need to be sure there isn't anything embarrassing hidden.</p>
+                                            <h5 class="card-title"><a href="blog-single.html">Caring for Hair Extensions</a></h5>
+                                            <p class="card-text">Having spent a sizeable cut on your classy Bella hair
+                                                peruvian extensions, here are five tips on how to keep them ever new...</p>
                                         </div>
                                         <div class="card-body">
-                                            <span>20Th October 2019</span>
-                                            <a href="javascrip:void(0)" class="card-link share">Share
+                                            <span>20th October 2022</span>
+                                            <a href="javascrip:void(0)" class="card-link share">Read
                                             </a>
                                             <div class="icon-share">
                                                 <a href=""><i class="fab fa-twitter"></i></a>
@@ -652,14 +651,14 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair2.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">All the Lorem Ipsum</a>
+                                            <h5 class="card-title"><a href="blog-single.html">Essential Hair Equipment For You</a>
                                             </h5>
-                                            <p class="card-text">It uses a dictionary of over 200 Latin words, combined
-                                                with a handful of model sentence structures, to generate.</p>
+                                            <p class="card-text">There is almost no way you can keep your hair alive
+                                                without owning some of these essential hair tools.</p>
                                         </div>
                                         <div class="card-body">
-                                            <span>20Th October 2019</span>
-                                            <a href="javascrip:void(0)" class="card-link share">Share
+                                            <span>28th October 2022</span>
+                                            <a href="javascrip:void(0)" class="card-link share">Read
                                             </a>
                                             <div class="icon-share">
                                                 <a href=""><i class="fab fa-twitter"></i></a>
@@ -673,13 +672,13 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair3.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">Contrary to popular</a>
+                                            <h5 class="card-title"><a href="blog-single.html">Why Your Hair is Your Crown</a>
                                             </h5>
-                                            <p class="card-text">Richard McClintock, a Latin professor at Hampden-Sydney
-                                                College in Virginia, looked up one of the more obscure Latin.</p>
+                                            <p class="card-text">Doing the most to get by, you put so much effort into 
+                                                your life daily, for that you've earned a crown, yous hair should tell.</p>
                                         </div>
                                         <div class="card-body">
-                                            <span>20Th October 2019</span>
+                                            <span>4th November 2022</span>
                                             <a href="javascrip:void(0)" class="card-link share">Share
                                             </a>
                                             <div class="icon-share">
