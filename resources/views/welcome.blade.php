@@ -496,11 +496,10 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair3.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html"> Sed ut perspiciatis
-                                                unde</a></h5>
+                                            <h5 class="card-title"><a href="blog-single.html"> Caring For Hair Extensions</a></h5>
 
-                                            <p class="card-text">But I must explain to you how all this mistaken idea of
-                                                denouncing pleasure and praising pain was born and I will give you.</p>
+                                            <p class="card-text">Having spent a sizeable cut on your classy Bella hair
+                                                peruvian extensions, here are five tips on how to keep them ever new...</p>
                                         </div>
                                         <div class="card-body">
                                             <span>20Th October 2019</span>
@@ -518,14 +517,14 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair2.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">Et harum quidem rerum</a>
+                                            <h5 class="card-title"><a href="blog-single.html">Essential Hair Equipment for You</a>
                                             </h5>
 
-                                            <p class="card-text">Nam libero tempore, cum soluta nobis est eligendi optio
-                                                cumque nihil impedit quo minus id quod maxime placeat.</p>
+                                            <p class="card-text">There is almost no way you can keep your hair alive
+                                                without owning some of these essential hair tools</p>
                                         </div>
                                         <div class="card-body">
-                                            <span>20Th October 2019</span>
+                                            <span>28th October 2022</span>
                                             <a href="javascrip:void(0)" class="card-link share">Share
                                             </a>
                                             <div class="icon-share">
@@ -540,13 +539,13 @@ Home
                                     <div class="card">
                                         <img src="imager/blog/bella-hair3.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="blog-single.html">Temporibus autem quib</a>
+                                            <h5 class="card-title"><a href="blog-single.html">Why Your Hair is Your Crown</a>
                                             </h5>
-                                            <p class="card-text">On the other hand, we denounce with righteous
-                                                indignation and dislike men who are so beguiled and demoralized.</p>
+                                            <p class="card-text">Doing the most to get by, you put so much effort into 
+                                                your life daily, for that you've earned a crown, yous hair should tell.</p>
                                         </div>
                                         <div class="card-body">
-                                            <span>20Th October 2019</span>
+                                            <span>4th November 2022</span>
                                             <a href="javascrip:void(0)" class="card-link share">Share
                                             </a>
                                             <div class="icon-share">
@@ -612,7 +611,7 @@ Home
                                                 your life daily, for that you've earned a crown, yous hair should tell.</p>
                                         </div>
                                         <div class="card-body share">
-                                            <span>04th November 2019</span>
+                                            <span>4th November 2019</span>
                                             <a href="javascrip:void(0)" class="card-link share">Read
                                             </a>
                                             <div class="icon-share">
