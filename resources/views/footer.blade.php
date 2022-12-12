@@ -27,7 +27,7 @@
             </div>
             <div class="col-md-3 col-sm-6 col-12">
                 <div class="content-footer">
-                    <h2>Profile</h2>
+                    <h2>Quick Links</h2>
                     <ul class="list-inline">
                         <li><a href="product_wigs.html">Wigs</a></li>
                         <li><a href="Product_treatment.html">Hair Treat</a></li>
