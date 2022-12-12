@@ -23,9 +23,17 @@
                             </li>
                             <li><a href="/about" >about</a>
                             </li>
-                            <li><a href="prooduct-page">Product List</a>
-                               
+                            <li><a href="shop.html">Shop</a>
+                                <ul>
+                                    <li><a href="product_wigs.html">Wigs</a></li>
+                                    <li><a href="product_treatment.html">Hair Treatment Products</a></li>
+                                    <li><a href="our-team.html">Accesories</a></li>
+                                    
+                                </ul>
                             </li>
+                            <!--li><a href="prooduct-page">Product List</a>
+                               
+                            </li-->
                             <!-- <li><a href="blog">blog</a>
                                
                             </li> -->
