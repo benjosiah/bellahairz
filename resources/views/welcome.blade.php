@@ -75,7 +75,7 @@ Home
             <div class=" col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                 <div class="product-out">
                     <div class="title">
-                        <h2 class="text-center">Super Double Drwan</h2>
+                        <h2 class="text-center">{{$first->name}}</h2>
                     </div>
                     <div id="demo-slide1" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
@@ -212,7 +212,7 @@ Home
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                 <div class="product-out">
                     <div class="title">
-                        <h2 class="text-center">Bouncy </h2>
+                        <h2 class="text-center">{{$second->name}} </h2>
                     </div>
                     <div id="demo-slide2" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
@@ -354,7 +354,7 @@ Home
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                 <div class="product-out">
                     <div class="title">
-                        <h2 class="text-center">Water Curls</h2>
+                        <h2 class="text-center">{{$last->name}}</h2>
                     </div>
                     <div id="demo-slide3" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
@@ -725,212 +725,110 @@ Home
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
+                                @foreach($best->products->take(2) as $product)
                                 <div class="card col-md-12 col-sm-12 col-12">
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/best1.jpg" alt="product">
+                                                <img class="image-cover" src="{{$product-image}}" alt="product">
                                             </a>
-                                            <p class="onsale">Sale</p>
+                                            
                                         </div>
                                         <div class=" col-lg-7 col-md-6 col-sm-6 col-12">
                                             <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Beauty </a></p>
+                                                <p class="card-title"><a href="/prooduct-page">{{$product->name}} </a></p>
                                                 <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Nutritional herbs</a></p>
+                                                {{$product->name}} </a></p>
 
                                                 <span class="price">
-												<del>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>51
-
-													</span>
-												</del>
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>41
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
 													</span>
 												</ins>
                                     </span>
                                                 <div class="content-best-new">
-                                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure.</p>
+                                                    <p>{{$product->description}}</p>
                                                 </div>
-                                                <button>ADD TO CARD</button>
+                                                <button onclick="addToCart({{$product}})">ADD TO CARD</button>
                                                 <button><span class="lnr lnr-heart"></span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card col-md-12 col-sm-12 col-12">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
-                                            <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/best2.jpg" alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
-                                            <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Makeup </a></p>
-                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Against aging</a></p>
-
-                                                <span class="price">
-												<ins>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
-													</span>
-												</ins>
-                                    </span>
-                                                <div class="content-best-new">
-                                                    <p>On the other hand, we denounce with righteous indignation and
-                                                        dislike
-                                                        men.</p>
-                                                </div>
-                                                <button>ADD TO CARD</button>
-                                                <button><span class="lnr lnr-heart"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
+                                
                             </div>
                             <div class="carousel-item">
 
+                                @foreach($best->products->take(2) as $product)
                                 <div class="card col-md-12 col-sm-12 col-12">
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/best1.jpg" alt="product">
+                                                <img class="image-cover" src="{{$product-image}}" alt="product">
                                             </a>
-                                            <p class="onsale">Sale</p>
+                                            
                                         </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
+                                        <div class=" col-lg-7 col-md-6 col-sm-6 col-12">
                                             <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Beauty </a></p>
+                                                <p class="card-title"><a href="/prooduct-page">{{$product->name}} </a></p>
                                                 <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Nutritional herbs</a></p>
+                                                {{$product->name}} </a></p>
 
                                                 <span class="price">
-												<del>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>51
-
-													</span>
-												</del>
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>41
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
 													</span>
 												</ins>
                                     </span>
                                                 <div class="content-best-new">
-                                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure.</p>
+                                                    <p>{{$product->description}}</p>
                                                 </div>
-                                                <button>ADD TO CARD</button>
+                                                <button onclick="addToCart({{$product}})">ADD TO CARD</button>
                                                 <button><span class="lnr lnr-heart"></span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card col-md-12 col-sm-12 col-12">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
-                                            <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/best2.jpg" alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
-                                            <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Makeup </a></p>
-                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Against aging</a></p>
-
-                                                <span class="price">
-												<ins>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
-													</span>
-												</ins>
-                                    </span>
-                                                <div class="content-best-new">
-                                                    <p>On the other hand, we denounce with righteous indignation and
-                                                        dislike
-                                                        men.</p>
-                                                </div>
-                                                <button>ADD TO CARD</button>
-                                                <button><span class="lnr lnr-heart"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
+                                
                             </div>
                             <div class="carousel-item">
+
+                                @foreach($best->products->take(2) as $product)
                                 <div class="card col-md-12 col-sm-12 col-12">
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/best1.jpg" alt="product">
+                                                <img class="image-cover" src="{{$product-image}}" alt="product">
                                             </a>
-                                            <p class="onsale">Sale</p>
+                                            
                                         </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
+                                        <div class=" col-lg-7 col-md-6 col-sm-6 col-12">
                                             <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Beauty </a></p>
+                                                <p class="card-title"><a href="/prooduct-page">{{$product->name}} </a></p>
                                                 <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Nutritional herbs</a></p>
+                                                {{$product->name}} </a></p>
 
                                                 <span class="price">
-												<del>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>51
-
-													</span>
-												</del>
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>41
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
 													</span>
 												</ins>
                                     </span>
                                                 <div class="content-best-new">
-                                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure.</p>
+                                                    <p>{{$product->description}}</p>
                                                 </div>
-                                                <button>ADD TO CARD</button>
+                                                <button onclick="addToCart({{$product}})">ADD TO CARD</button>
                                                 <button><span class="lnr lnr-heart"></span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card col-md-12 col-sm-12 col-12">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
-                                            <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/best2.jpg" alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
-                                            <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Makeup </a></p>
-                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Against aging</a></p>
-
-                                                <span class="price">
-												<ins>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
-													</span>
-												</ins>
-                                    </span>
-                                                <div class="content-best-new">
-                                                    <p>On the other hand, we denounce with righteous indignation and
-                                                        dislike
-                                                        men.</p>
-                                                </div>
-                                                <button>ADD TO CARD</button>
-                                                <button><span class="lnr lnr-heart"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -958,192 +856,111 @@ Home
                     <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
+                                @foreach($new->products->take(2) as $product)
                                 <div class="card col-md-12 col-sm-12 col-12">
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/new1.jpg" alt="product">
+                                                <img class="image-cover" src="{{$product-image}}" alt="product">
                                             </a>
-                                        </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
-                                            <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Spa </a></p>
-                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Baebody eye cream</a></p>
-
-                                                <span class="price">
-												<ins>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
-													</span>
-												</ins>
-                                    </span>
-                                                <div class="content-best-new">
-                                                    <p>Nor again is there anyone who loves or pursues or desires to
-                                                        obtain pain.</p>
-                                                </div>
-                                                <button>ADD TO CARD</button>
-                                                <button><span class="lnr lnr-heart"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card col-md-12 col-sm-12 col-12">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
-                                            <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/new2.jpg" alt="product">
-                                            </a>
-                                            <p class="onnew">New</p>
-                                        </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
-                                            <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Beauty </a></p>
-                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Eye gel for dark </a></p>
-                                                <span class="price">
-												<ins>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
-													</span>
-												</ins>
-                                    </span>
-                                                <div class="content-best-new">
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                        accusantium.</p>
-                                                </div>
-                                                <button>ADD TO CARD</button>
-                                                <button><span class="lnr lnr-heart"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-
-                                <div class="card col-md-12 col-sm-12 col-12">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
-                                            <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/new1.jpg" alt="product">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
-                                            <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Spa </a></p>
-                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Baebody eye cream</a></p>
-
-                                                <span class="price">
-												<ins>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
-													</span>
-												</ins>
-                                    </span>
-                                                <div class="content-best-new">
-                                                    <p>Nor again is there anyone who loves or pursues or desires to
-                                                        obtain pain.</p>
-                                                </div>
-                                                <button>ADD TO CARD</button>
-                                                <button><span class="lnr lnr-heart"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card col-md-12 col-sm-12 col-12">
-                                    <div class="row no-gutters">
-                                        <div class=" col-lg-5 col-md-6 col-sm-6 col-12">
-                                            <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/new2.jpg" alt="product">
-                                            </a>
-                                            <p class="onnew">New</p>
-                                        </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
-                                            <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Beauty </a></p>
-                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Eye gel for dark </a></p>
-                                                <span class="price">
-												<ins>
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
-													</span>
-												</ins>
-                                    </span>
-                                                <div class="content-best-new">
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                        accusantium.</p>
-                                                </div>
-                                                <button>ADD TO CARD</button>
-                                                <button><span class="lnr lnr-heart"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-
-                                <div class="card col-md-12 col-sm-12 col-12">
-                                    <div class="row no-gutters">
-                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
-                                            <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/new1.jpg" alt="product">
-                                            </a>
+                                            
                                         </div>
                                         <div class=" col-lg-7 col-md-6 col-sm-6 col-12">
                                             <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Spa </a></p>
+                                                <p class="card-title"><a href="/prooduct-page">{{$product->name}} </a></p>
                                                 <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Baebody eye cream</a></p>
+                                                {{$product->name}} </a></p>
 
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
 													</span>
 												</ins>
                                     </span>
                                                 <div class="content-best-new">
-                                                    <p>Nor again is there anyone who loves or pursues or desires to
-                                                        obtain pain.</p>
+                                                    <p>{{$product->description}}</p>
                                                 </div>
-                                                <button>ADD TO CARD</button>
+                                                <button onclick="addToCart({{$product}})">ADD TO CARD</button>
                                                 <button><span class="lnr lnr-heart"></span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
+        
+                            </div>
+                            <div class="carousel-item">
+
+                                @foreach($new->products->take(2) as $product)
                                 <div class="card col-md-12 col-sm-12 col-12">
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="imager/product-popular/new2.jpg" alt="product">
+                                                <img class="image-cover" src="{{$product-image}}" alt="product">
                                             </a>
-                                            <p class="onnew">New</p>
+                                            
                                         </div>
-                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
+                                        <div class=" col-lg-7 col-md-6 col-sm-6 col-12">
                                             <div class="card-body">
-                                                <p class="card-title"><a href="/prooduct-page">Beauty </a></p>
+                                                <p class="card-title"><a href="/prooduct-page">{{$product->name}} </a></p>
                                                 <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
-                                                    Eye gel for dark </a></p>
+                                                {{$product->name}} </a></p>
+
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>79
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
 													</span>
 												</ins>
                                     </span>
                                                 <div class="content-best-new">
-                                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                        accusantium.</p>
+                                                    <p>{{$product->description}}</p>
                                                 </div>
-                                                <button>ADD TO CARD</button>
+                                                <button onclick="addToCart({{$product}})">ADD TO CARD</button>
                                                 <button><span class="lnr lnr-heart"></span></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+
+
+                                @foreach($new->products->take(2) as $product)
+                                <div class="card col-md-12 col-sm-12 col-12">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+                                            <a href="javascript:void(0)" class="wp-post-image">
+                                                <img class="image-cover" src="{{$product-image}}" alt="product">
+                                            </a>
+                                            
+                                        </div>
+                                        <div class=" col-lg-7 col-md-6 col-sm-6 col-12">
+                                            <div class="card-body">
+                                                <p class="card-title"><a href="/prooduct-page">{{$product->name}} </a></p>
+                                                <p class="woocommerce-loop-product__title"><a href="javascript:void(0)">
+                                                {{$product->name}} </a></p>
+
+                                                <span class="price">
+												<ins>
+													<span class="woocommerce-Price-amount amount">
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
+													</span>
+												</ins>
+                                    </span>
+                                                <div class="content-best-new">
+                                                    <p>{{$product->description}}</p>
+                                                </div>
+                                                <button onclick="addToCart({{$product}})">ADD TO CARD</button>
+                                                <button><span class="lnr lnr-heart"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
