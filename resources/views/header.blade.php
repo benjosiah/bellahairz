@@ -23,9 +23,17 @@
                             </li>
                             <li><a href="/about" >about</a>
                             </li>
-                            <li><a href="prooduct-page">Product List</a>
-                               
+                            <li><a href="shop.html">Shop</a>
+                                <ul>
+                                    <li><a href="product_wigs.html">Wigs</a></li>
+                                    <li><a href="product_treatment.html">Hair Treatment</a></li>
+                                    <li><a href="our-team.html">Accesories</a></li>
+                                    
+                                </ul>
                             </li>
+                            <!--li><a href="prooduct-page">Product List</a>
+                               
+                            </li-->
                             <!-- <li><a href="blog">blog</a>
                                
                             </li> -->
@@ -105,7 +113,7 @@
                 <div class="introduce">
                     <div class="content-introduce">
                         <h3>follow instagram</h3>
-                        <p>@Ura.cosmetic_beauty</p>
+                        <p>@bellahairzng</p>
                         <div class="img-controduce">
                             <img src="imager/home/introduce.jpg" alt="">
                             <img src="imager/home/introduce1.jpg" alt="">
@@ -119,10 +127,10 @@
                         <input type="text" placeholder="Email">
                         <button class="bt"><i class="fas fa-angle-right"></i></button>
                         <div class="icon-introduce">
-                            <a href="" style="margin-left: 95px;"><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <!--a href="" style="margin-left: 95px;"><i class="fab fa-twitter"></i></a-->
+                            <a href="https://www.facebook.com/Bellahairzng/"><i class="fab fa-facebook"></i></a>
+                            <!--a href=""><i class="fab fa-linkedin-in"></i></a-->
+                            <a href="https://www.instagram.com/Bellahairzng/"><i class="fab fa-instagram"></i></a>
                         </div>
                         <span class="lnr lnr-cross close-introduce"></span>
                     </div>

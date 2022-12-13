@@ -4,11 +4,11 @@
             <div class="col-md-3 col-sm-6 col-12">
                 <img src="imager/home/Logo.png" alt="">
                 <ul class="list-inline">
-                    <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut</li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
+                    <li>Bella Hairz Beauty & Supply Company Ltd</li>
+                    <li><!--a href=""><i class="fab fa-twitter"></i></a-->
+                        <a href="https://facebook.com/bellahairzng"><i class="fab fa-facebook"></i></a>
+                        <!--a href=""><i class="fab fa-linkedin-in"></i></a-->
+                        <a href="https://instagram.com/bellahairzng"><i class="fab fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -16,22 +16,23 @@
                 <div class="content-footer">
                     <h2>Locate Us</h2>
                     <ul class="list-inline">
-                        <li>No 40 Baria sreet 133/2</li>
-                        <li>+ (156) 1800-366-6666</li>
-                        <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="480d3a212b65707a082d30292538242d662b2725">[email&#160;protected]</a></li>
-                        <li>www.uray.com</li>
+                        <li>Suite E159-161, Road 2, Ikota Shoping Complex, Lekki 
+                            Lagos, Nigeria</li>
+                        <li>+ (234) 803 335 0651</li>
+                        <li>sales@bellahairz.com</li>
+                        <li>www.bellahairz.com</li>
                     </ul>
                 </div>
 
             </div>
             <div class="col-md-3 col-sm-6 col-12">
                 <div class="content-footer">
-                    <h2>Profile</h2>
+                    <h2>Quick Links</h2>
                     <ul class="list-inline">
-                        <li><a href="my-account.html">My account</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="#">Order Tracking</a></li>
-                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="product_wigs.html">Wigs</a></li>
+                        <li><a href="Product_treatment.html">Hair Treat</a></li>
+                        <li><a href="product_accessories">Accessories</a></li>
+                        <li><a href="contact.html">Help & Support</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +43,7 @@
                     <li><input type="text" placeholder="Email">
                         <button> ></button>
                     </li>
-                    <li>@2019 Uray.Get The Theme</li>
+                    <li>@2023 Bella Hair</li>
                 </ul>
             </div>
         </div>
