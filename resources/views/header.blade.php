@@ -23,12 +23,11 @@
                             </li>
                             <li><a href="/about" >about</a>
                             </li>
-                            <li><a href="shop.html">Shop</a>
+                            <li><a href="/prooduct-page">Shop</a>
                                 <ul>
-                                    <li><a href="product_wigs.html">Wigs</a></li>
-                                    <li><a href="product_treatment.html">Hair Treatment</a></li>
-                                    <li><a href="our-team.html">Accesories</a></li>
-                                    
+                                    @foreach(App\Models\Category::all()->take(3) as $category)
+                                    <li><a href="/prooduct-page?category={{$category->slug}}">{{$category->name}}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <!--li><a href="prooduct-page">Product List</a>

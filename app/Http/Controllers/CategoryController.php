@@ -28,8 +28,12 @@ class CategoryController extends Controller
             'name' => 'required',
         ]);
 
+        $name = strtolower($request->nmae);
+        $slug = str_replace(' ', '-', $name);
+
         $category = new Category();
         $category->name = $request->name;
+        $category->slug = $slug;
         $category->save();
 
         return redirect()->route('categories.index');

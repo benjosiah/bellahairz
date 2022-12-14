@@ -111,8 +111,18 @@ class ProductController extends Controller
     }
 
     public function uploadfile($file){
+        // $src_path = file_get_contents($file);
+        // dd($$file);
+        // // Create an image resource for the source image
+        // $src_img = imagecreatefromjpeg($src_path);
+
+        // // Create a 200x200 pixel image resource to hold the resized image
+        // $dst_img = imagecreatetruecolor(200, 200);
+
+        // // Resize the source image and copy it to the destination image
+        // imagecopyresampled($dst_img, $src_img, 0, 0, 0, 0, 200, 200, imagesx($src_img), imagesy($src_img));
         cloudinary()->admin();
-        $path = $file->storeOnCloudinary('resources');
+        $path = $file->storeOnCloudinary('prducts');
         $url = $path->getPath();
         return $url;
     }

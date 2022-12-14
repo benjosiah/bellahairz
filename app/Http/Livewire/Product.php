@@ -52,9 +52,11 @@ class Product extends Component
 
     public function render(Request $request)
     {
-        $category = $request->category??'';
+        $category_slug = $request->category??'';
+
+        $category = Category::where('slug', $category_slug)->first()->id;
         if($request->has('category') && $category !== ''){
-            $products = ProductList::where('category_id',$category )->paginate(12);
+            $products = ProductList::where('category_id',$category)->paginate(12);
             // return $products;
         }else{
             $products = ProductList::paginate(12);

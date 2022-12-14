@@ -112,7 +112,7 @@
                         <h2>Categories</h2>
                         <a href="/prooduct-page"> All </a>
                         @foreach($categories as $category)
-                        <a href="/prooduct-page?category={{$category->id}}"> {{$category->name}} ({{$category->products->count()}})</a>
+                        <a href="/prooduct-page?category={{$category->slug}}"> {{$category->name}} ({{$category->products->count()}})</a>
                         @endforeach
                     </div>
                     <!-- <div class="popular-item">

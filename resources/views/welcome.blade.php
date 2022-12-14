@@ -728,7 +728,7 @@ Home
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="{{$product-image}}" alt="product">
+                                                <img class="image-cover" src="{{$product->image}}" alt="product">
                                             </a>
                                             
                                         </div>
@@ -741,7 +741,7 @@ Home
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{$product->price}}
 													</span>
 												</ins>
                                     </span>
@@ -764,7 +764,7 @@ Home
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="{{$product-image}}" alt="product">
+                                                <img class="image-cover" src="{{$product->image}}" alt="product">
                                             </a>
                                             
                                         </div>
@@ -777,7 +777,7 @@ Home
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{$product->price}}
 													</span>
 												</ins>
                                     </span>
@@ -800,7 +800,7 @@ Home
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="{{$product-image}}" alt="product">
+                                                <img class="image-cover" src="{{$product->image}}" alt="product">
                                             </a>
                                             
                                         </div>
@@ -813,7 +813,7 @@ Home
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{$product->price}}
 													</span>
 												</ins>
                                     </span>
@@ -859,7 +859,7 @@ Home
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="{{$product-image}}" alt="product">
+                                                <img class="image-cover" src="{{$product->image}}" alt="product">
                                             </a>
                                             
                                         </div>
@@ -872,7 +872,7 @@ Home
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{$product->price}}
 													</span>
 												</ins>
                                     </span>
@@ -895,7 +895,7 @@ Home
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="{{$product-image}}" alt="product">
+                                                <img class="image-cover" src="{{$product->image}}" alt="product">
                                             </a>
                                             
                                         </div>
@@ -908,7 +908,7 @@ Home
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{$product->price}}
 													</span>
 												</ins>
                                     </span>
@@ -932,7 +932,7 @@ Home
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-6 col-sm-6 col-12">
                                             <a href="javascript:void(0)" class="wp-post-image">
-                                                <img class="image-cover" src="{{$product-image}}" alt="product">
+                                                <img class="image-cover" src="{{$product->image}}" alt="product">
                                             </a>
                                             
                                         </div>
@@ -945,7 +945,7 @@ Home
                                                 <span class="price">
 												<ins>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">NGN</span>{{product->price}}
+														<span class="woocommerce-Price-currencySymbol">NGN</span>{{$product->price}}
 													</span>
 												</ins>
                                     </span>

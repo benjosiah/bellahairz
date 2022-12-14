@@ -18,14 +18,47 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        \App\Models\User::factory()->create([
-            'name' => 'Admin User',
-            'email' => 'admin@demo.com',
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Admin User',
+        //     'email' => 'admin@demo.com',
+        // ]);
+
+
+
+        Category::factory()->has(
+            Product::factory(10)
+        )->create([
+            "name" => "Wigs",
+            "slug" => "wigs"
         ]);
 
-        $products = Category::factory(5)->has(
+        Category::factory()->has(
             Product::factory(10)
-        )->create();
+        )->create([
+            "name" => "Hair Products",
+            "slug" => "hair-products"
+        ]);
+
+        Category::factory()->has(
+            Product::factory(10)
+        )->create([
+            "name" => "Accesories",
+            "slug" => "accesories"
+        ]);
+
+        Category::factory()->has(
+            Product::factory(10)
+        )->create([
+            "name" => "Best Sellers",
+            "slug" => "best-sellers"
+        ]);
+
+        Category::factory()->has(
+            Product::factory(10)
+        )->create([
+            "name" => "New Release",
+            "slug" => "new-release"
+        ]);
        
     }
 }
