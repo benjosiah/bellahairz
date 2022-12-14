@@ -31,8 +31,8 @@ class ProductPageController extends Controller
         $first = Category::with('products')->first();
         $second = Category::with('products')->skip(1)->take(1)->first();
         $last = Category::with('products')->skip(2)->take(1)->first();
-        $best = Category::with('products')->where('name', 'best sellers')->first();
-        $new = Category::with('products')->where('name', 'new release')->first();
+        $best = Category::with('products')->where('slug', 'best-sellers')->first();
+        $new = Category::with('products')->where('slug', 'new-release')->first();
         // dd($second, $last);
         return view('welcome', [
             'first'=> $first,

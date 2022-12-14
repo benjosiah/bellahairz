@@ -39,7 +39,7 @@
                         <div class="card">
                             <div class="card-img-top">
                                 <a href="javascript:void(0)" class="wp-post-image">
-                                    <img class="image-cover" src="{{$product->image}}" alt="product">
+                                    <img class="image-cover" src="{{$product->image}}" alt="product" style="width: 270px; height:270px; margin: 0px 3px;">
                                 </a>
                                 
                                 <!-- <p class="onnew">New</p> -->

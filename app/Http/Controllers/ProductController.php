@@ -7,6 +7,7 @@ use Inertia\Inertia;
 use App\Models\Product as Product;
 use App\Models\Category;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+use Intervention\Image\ImageManagerStatic as Image;
 
 
 class ProductController extends Controller
@@ -111,6 +112,11 @@ class ProductController extends Controller
     }
 
     public function uploadfile($file){
+      
+        // $filename = $image->getClientOriginalName();
+
+        $image_resize = Image::make($file->getRealPath());              
+        $image_resize->resize(640, 480);
         // $src_path = file_get_contents($file);
         // dd($$file);
         // // Create an image resource for the source image
@@ -121,10 +127,11 @@ class ProductController extends Controller
 
         // // Resize the source image and copy it to the destination image
         // imagecopyresampled($dst_img, $src_img, 0, 0, 0, 0, 200, 200, imagesx($src_img), imagesy($src_img));
+        // dd($image_resize->basePath());
         cloudinary()->admin();
-        $path = $file->storeOnCloudinary('prducts');
-        $url = $path->getPath();
-        return $url;
+        $path = Cloudinary::upload($image_resize->basePath())->getSecurePath();
+        // dd($path);
+        return $path;
     }
 
     public function updateImage(Request $request, $id)

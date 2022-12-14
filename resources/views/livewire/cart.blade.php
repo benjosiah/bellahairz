@@ -20,7 +20,7 @@
                     </td>
                     <td>
                         <div class="row">
-                            <img class="product-image" src="images/{{$item->options->image}}" alt="" style="width:100px">
+                            <img class="product-image" src="{{$item->options->image}}" alt="" style="width:100px">
                             <p>{{$item->name}}</p>
                         </div>
                     </td>
@@ -52,7 +52,7 @@
                 <table class="table">
                     <tr>
                         <td colspan="2">
-                            <img src="imager/cart1.jpg" alt="">
+                        <img class="image-cover" src="{{$item->options->image}}" alt="product" style="width: 200px; height:200px; margin: 0px 3px;">
                         </td>
                     </tr>
                     <tr>

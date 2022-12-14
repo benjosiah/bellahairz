@@ -7,9 +7,11 @@
     "require": {
         "php": "^8.0.2",
         "cloudinary-labs/cloudinary-laravel": "^2.0",
+        "fakerphp/faker": "^1.9.1",
         "guzzlehttp/guzzle": "^7.2",
         "hardevine/shoppingcart": "^3.1",
         "inertiajs/inertia-laravel": "^0.6.3",
+        "intervention/image": "^2.7",
         "jantinnerezo/livewire-alert": "^2.2",
         "laravel/framework": "^9.19",
         "laravel/jetstream": "^2.12",
@@ -17,8 +19,7 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10",
         "tightenco/ziggy": "^1.0",
-        "unicodeveloper/laravel-paystack": "^1.0",
-        "fakerphp/faker": "^1.9.1"
+        "unicodeveloper/laravel-paystack": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
